@@ -8,7 +8,8 @@ tasks:
   - name: Install dependencies
     init: |
       export DFXVM_INIT_YES=true
-      sh -ci "$(curl -fsSL https://smartcontracts.org/install.sh)"
+      export INSTALL_SCRIPT=$(curl -fsSL https://internetcomputer.org/install.sh)
+      sh -ci "$INSTALL_SCRIPT"
       source "$HOME/.local/share/dfx/env"
       rustup target add wasm32-unknown-unknown
     command: |
