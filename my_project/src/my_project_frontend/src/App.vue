@@ -27,9 +27,9 @@ const response = fetch(url);
 </script>
 
 <template>
-  <main>
-  <table>
-    <thead>
+  <main class="container mx-auto">
+  <table class="w-full">
+    <thead class="text-lime-500 border-solid border-b-2 border-lime-500">
       <tr>
         <th scope="col">Waluta</th>
         <th scope="col">Kod</th>
@@ -37,10 +37,10 @@ const response = fetch(url);
       </tr>
     </thead>
     <tbody>
-      <tr v-for="kurs in kursy">
-        <th scope="row">{{kurs.currency}}</th>
-        <td>{{kurs.code}}</td>
-        <td>{{kurs.mid}}</td>
+      <tr v-for="kurs in kursy" class="border-solid border-b-[1px] border-lime-500">
+        <th scope="row" class="p-2">{{kurs.currency}}</th>
+        <td class="p-2">{{kurs.code}}</td>
+        <td class="p-2">{{kurs.mid}}</td>
       </tr>
     </tbody>  
   </table>
